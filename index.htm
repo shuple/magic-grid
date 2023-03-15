@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Magic Grid</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/css/layout.css" />
+    <script type="module" src="/js/magic_grid.js"></script>
+    <link rel="shortcut icon" href="/image/icon/64x64.ico">
+    <link rel="apple-touch-icon" sizes="120x120" href="/image/icon/120x120.png"> <!-- iPhone      -->
+    <link rel="apple-touch-icon" sizes="152x152" href="/image/icon/152x152.png"> <!-- iPhone Plus -->
+    <link rel="apple-touch-icon" sizes="167x167" href="/image/icon/167x167.png"> <!-- iPad Retina -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/image/icon/180x180.png"> <!-- iPad Pro    -->
+  </head>
+  <body>
+    <div id="grid-container" class="grid-container">
+      <div class="grid-header">
+        <div class="grid-item">
+          <div class="header">Magic Grid</div>
+        </div>
+      </div>
+      <div class="grid-attribute">
+        <div class="grid-item">
+          <div class="input-group">
+            <span>Grid: <span id="grid-value">25</span>px</span>
+            <input id="grid-range" type="range" min="1" max="100" value="25">
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="input-group">
+            <span>Alpha <span id="alpha-value">0.5</span></span>
+            <input id="alpha-range" type="range" min="0.0" max="1.0" value="0.5" step="0.01">
+          </div>
+        </div>
+      </div>
+      <div id="grid-file-drop" class="grid-file-drop file-drop">
+        <div class="grid-item">
+          <div class="input-group">
+            <span>Upload Image</span>
+            <input id="file-upload" type="file" />
+          </div>
+        </div>
+      </div>
+      <div id="grid-canvas" class="grid-canvas file-drop">
+        <div class="grid-item">
+          <canvas id="layer0"></canvas>
+          <canvas id="layer1"></canvas>
+        </div>
+      </div>
+      <div class="grid-footer">
+        <div class="grid-item">
+          <div class="hr"></div>
+          <div class="footer">Magic Grid</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

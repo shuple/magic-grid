@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+body {
+  height: 100%;
+  font-family: 'Meiryo', 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-size: 14px;
+}
+
+.hr {
+  border-top: 1px solid black;
+  margin: 0 -10px 5px -10px;
+}
+
+.header {
+}
+
+.footer {
+  font-size: small;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-item {
+  padding: 10px;
+}
+
+.grid-header {
+  display: grid;
+  grid-column: 1 / span 2;
+  background-color: #efefef;
+}
+
+.grid-footer {
+  display: grid;
+  grid-column: 1 / span 2;
+}
+
+.grid-header .grid-item, .grid-footer .grid-item {
+  border: 0px;
+}
+
+.grid-attribute {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  grid-column: 1 / span2;
+}
+
+.grid-attribute .grid-item {
+  border: 1px solid black;
+}
+
+.grid-file-drop {
+  display: grid;
+  grid-column: 1 / span 2;
+  border: 1px dashed #ccc;
+  cursor: pointer;
+}
+
+.grid-file-drop .grid-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-canvas {
+  margin: 0 auto;
+  display: none;
+}
+
+.grid-canvas .grid-item {
+  position: relative;
+  padding: 0;
+}
+
+.grid-canvas canvas {
+  position: absolute;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group input[type=file] {
+  display: none;
+}
+
+@media(min-width: 1000px) {
+  .grid-container {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
